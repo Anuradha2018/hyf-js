@@ -1,1 +1,1 @@
-# hyf-js JavaScript module1
+# HYF-JS: JavaScript module2
