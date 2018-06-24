@@ -36,8 +36,3 @@ let carList = []
 const CarAdd = document.getElementById("AddCar");
 
 CarAdd.addEventListener("click", AddCar);
-
-var CarList = {
-  "CarName":"Ford",
-  "CarYear":"1970",
-  "CarPlace":"USA"};
