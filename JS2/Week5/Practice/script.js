@@ -15,7 +15,7 @@ btn.addEventListener("click", function(){
 function renderHTML(data){
     var htmlString ='';
     for(let i =0; i<data.length; i++){
-        htmlString += "<ul>" +data[i].name +" has  a full name  of " + data[i].full_name +"</ul>";
+        htmlString += "<p>" +data[i].name +" has  a full name  of " + data[i].full_name +"</p>";
 
     }
     repoContainer.insertAdjacentHTML('beforeend', htmlString)
