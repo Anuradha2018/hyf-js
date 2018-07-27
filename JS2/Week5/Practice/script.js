@@ -1,25 +1,28 @@
-function matrix( rows, cols, defaultValue){
+var repoContainer = document.getElementById("repo-info");
 
-    var arr = [];
-  
-    // Creates all lines:
-    for(var i=0; i < rows; i++){
-  
-        // Creates an empty line
-        arr.push([]);
-  
-        // Adds cols to the empty line:
-        arr[i].push( new Array(cols));
-  
-        for(var j=0; j < cols; j++){
-          // Initializes:
-          arr[i][j] = defaultValue;
-        }
+var btn = document.getElementById('btn');
+btn.addEventListener("click", function(){
+    
+    var ourRequest = new XMLHttpRequest();
+    ourRequest.open('GET', 'https://api.github.com/orgs/HackYourFuture/repos');
+    ourRequest.onload = function(){
+    var ourData =JSON.parse(ourRequest.responseText);
+    renderHTML(ourData);
+};
+    ourRequest.send();
+});
+
+function renderHTML(data){
+    var htmlString ='';
+    for(let i =0; i<data.length; i++){
+        htmlString += "<ul>" +data[i].name +" has  a full name  of " + data[i].full_name +"</ul>";
+
     }
-  
-  return arr;
-  }
+    repoContainer.insertAdjacentHTML('beforeend', htmlString)
+}
 
-  x = matrix(4, 5, '*');
 
-  console.log(x);
+
+
+
+
