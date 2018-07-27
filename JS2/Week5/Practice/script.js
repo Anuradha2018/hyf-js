@@ -6,13 +6,11 @@ btn.addEventListener("click", function(){
     var ourRequest = new XMLHttpRequest();
     ourRequest.open('GET', 'https://api.github.com/orgs/HackYourFuture/repos');
     ourRequest.onload = function(){
+        var ourData =JSON.parse(ourRequest.responseText);
+         renderHTML(ourData);
         
-             var ourData =JSON.parse(ourRequest.responseText);
-             renderHTML(ourData);
        
-            console.log("We connected to the server , but it returned an error");
-           
-    };
+}
 
     ourRequest.onerror =function(){
         console.log("Connection Error");
@@ -25,13 +23,9 @@ function renderHTML(data){
     var htmlString ='';
     for(let i =0; i<data.length; i++){
         htmlString += "<p>" +data[i].name +" has  a full name  of " + data[i].full_name +"</p>";
+        
 
-    }
-    repoContainer.insertAdjacentHTML('beforeend', htmlString)
+    
+    repoContainer.insertAdjacentHTML('beforeend', htmlString);
 }
-
-
-
-
-
-
+}
