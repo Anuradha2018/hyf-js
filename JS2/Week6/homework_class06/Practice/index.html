@@ -1,21 +1,34 @@
 <!DOCTYPE html>
-<html lang>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>JSON and AJAX</title>
+    <title>OMDB Search</title>
 </head>
   <body>
-      <header> 
-          <h1>JSON and AJAX</h1>
-          <button id ="btn"> Fetch info for repos</button>
+      <form id="searchForm">
+      <label>
+            Search:
+            <input type = "text" name ="searchString" placeholder="Type the keyword">
 
-      </header>
+      </label>
+      <input type ="submit" name ="Submit">
+     
+  </form>
+      <table id="repoList">
+          <thead>
+            <tr>
+                <th>Name</th>
+                <th>Number of Forks</th>
+            </tr>
+          </thead>
+          <tbody>
+              
+          </tbody>
+      </table>
 
-      <div id ="repo-info">
-
-      </div>
-        <script src ="script.js"> </script>
+        <script type ="text/javascript" src ="search.js"> </script>
   </body>
   </html>
+

@@ -1,0 +1,32 @@
+
+body{
+    background-color:#5F9EA0;
+}#heading{
+    background-color:#DCDCDC;
+}
+#logo{
+    margin-left:425px;
+    overflow: hidden;
+}
+#query{
+    margin-top:20px;
+    text-align: center;
+}
+label{
+    font-size:20px;
+}
+#root {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    margin: 1rem;
+    border: 1px solid gray;
+  }
+  

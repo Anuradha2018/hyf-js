@@ -4,11 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>HYF06Week06</title>
+    <title>OMDB Search</title>
 </head>
   <body>
+      <form id="searchForm">
+      <label>
+            Search:
+            <input type = "text" name ="searchString" placeholder="Type the keyword">
 
-        <script src ="async.js"> </script>
+      </label>
+      <input type ="submit" name ="Submit">
+     
+  </form>
+      <table id="moviesList">
+          <thead>
+            <tr>
+                <th>Title</th>
+                <th>Poster</th>
+            </tr>
+          </thead>
+          <tbody>
+              
+          </tbody>
+      </table>
+
+        <script type ="text/javascript" src ="search.js"> </script>
   </body>
   </html>
 
