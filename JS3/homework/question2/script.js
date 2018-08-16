@@ -90,5 +90,14 @@ for(let i =0; i < titlesWithkeywords.length; i++){
 }
 console.log(keywordCounter);
 
+//v.
+
+
+
+let noOfMovies = movies.filter(movies=>movies.year >= 1980 && movies.year <= 1989);
+
+console.log(noOfMovies.length);
+
+    
 
 });
