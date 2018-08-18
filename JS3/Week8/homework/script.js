@@ -18,13 +18,20 @@ function divisionBy(divisor){
 }
 
 const divisibleByThree = divisionBy(3);
-divisibleByThree();
+//divisibleByThree();
 
 const divisibleByTen = divisionBy(10);
-divisibleByTen();
+//divisibleByTen();
 
 const divisibleByTwentyOne = divisionBy(21);
-divisibleByTwentyOne();
+//divisibleByTwentyOne();
+
+const newArr = createArray(30);
+newArr.forEach((num)=>{
+    divisionBy(num);
+    console.log(newArr);
+});
+
 
 /*
 let arr = [];
