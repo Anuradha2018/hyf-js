@@ -1,3 +1,32 @@
+function createArray(upperLimit){
+    var array = [];
+    for (let i = 1; i <= upperLimit; i++) {
+        array.push(i);
+        
+    }
+   return array;
+}
+
+const array = createArray(1000);
+console.log(array);
+
+function divisionBy(divisor){
+    const divisibleArray = array.filter(num => num % divisor == 0);
+    console.log(divisibleArray);
+    console.log(`The numbers divisible by ${divisor} are ${divisibleArray}`);
+    return divisibleArray;
+}
+
+const divisibleByThree = divisionBy(3);
+divisibleByThree();
+
+const divisibleByTen = divisionBy(10);
+divisibleByTen();
+
+const divisibleByTwentyOne = divisionBy(21);
+divisibleByTwentyOne();
+
+/*
 let arr = [];
     for( let i=1; i<=1000;i++){
         arr.push(i);
@@ -12,3 +41,5 @@ let arr = [];
 
     // apply your function
     // const divisbleByWHATEVERNUMBER = arr ... WHATEVERNUMBER ... ;
+
+    */
