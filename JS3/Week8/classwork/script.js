@@ -33,3 +33,34 @@ setTimeout(()=>{
         .catch(err => console.log(error));
 
 },3000);
+
+// For closures:
+// Exercise 2. Fill in the blank functions using closures
+function createClass(students, roomNumber, time) {
+    return {
+        addStudent(name) {
+            students.push(name);
+        },
+        removeStudent(name) {
+            students.pop(name);
+        },
+        removeAllStudents() {
+            
+        },
+        getStudents() {
+            return students;
+        },
+        getNumberOfStudents() {
+            return students.length;
+        },
+        getTime() {
+            return time;
+        },
+        changeTime() {
+
+        },
+        isStudentInClass() {
+
+        },
+    }
+}
