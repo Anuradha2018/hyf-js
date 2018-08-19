@@ -13,8 +13,19 @@ const movieAPI = "https://gist.githubusercontent.com/pankaj28843/08f397fcea7c760
 const redditAPI = "https://www.reddit.com/r/ProgrammerHumor.json";
 
 
-setTimeout(()=>{
+const setTimeoutPromise = new Promise((resolve, reject)=>{
+    settimeout(() => {
+        resolve('hllo');
+    }, 3000);
+});
 
+setTimeoutPromise.then((data) => {
+    console.log(data);
+    console.log(2);
+});
+
+
+setTimeoutPromise.then(() => {
     fetch(movieAPI)
         .then(response =>{
             return response.json();
@@ -32,6 +43,9 @@ setTimeout(()=>{
         })
         .catch(err => console.log(error));
 
+})
+
+    
 },3000);
 
 // For closures:

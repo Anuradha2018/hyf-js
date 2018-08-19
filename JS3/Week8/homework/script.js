@@ -11,20 +11,20 @@ const array = createArray(1000);
 console.log(array);
 
 function divisionBy(divisor){
-    const divisibleArray = array.filter(num => num % divisor == 0);
-    console.log(divisibleArray);
-    console.log(`The numbers divisible by ${divisor} are ${divisibleArray}`);
-    return divisibleArray;
-}
+    return divisibleArray => {
+        return divisibleArray.filter(num => num % divisor == 0);
+      
+    };
+    
+};
 
 const divisibleByThree = divisionBy(3);
-//divisibleByThree();
-
+console.log(divisibleByThree);
 const divisibleByTen = divisionBy(10);
-//divisibleByTen();
-
+console.log(divisibleByTen);
 const divisibleByTwentyOne = divisionBy(21);
-//divisibleByTwentyOne();
+console.log(divisibleByTwentyOne);
+
 
 const newArr = createArray(30);
 newArr.forEach((num)=>{
